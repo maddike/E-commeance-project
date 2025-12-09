@@ -1,0 +1,101 @@
+.nonveg-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.nonveg-title {
+  font-size: 50px;
+  color: #b71c1c;
+  margin-bottom: 20px;
+}
+
+.nonveg-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.nonveg-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.nonveg-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.nonveg-card img {
+  width: 180px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.nonveg-card h3 {
+  margin: 10px 0 5px 0;
+}
+
+.nonveg-card p {
+  margin: 5px 0;
+}
+
+.nonveg-card button {
+  padding: 8px 12px;
+  background-color: #b71c1c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nonveg-card button:hover {
+  background-color: #7f0000;
+}
+
+/* Middle popup */
+.popup {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #388e3c;
+  color: white;
+  padding: 20px 35px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  z-index: 9999;
+  animation: fadeInOut 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -60%); }
+  20% { opacity: 1; transform: translate(-50%, -50%); }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -60%); }
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background-color: #b71c1c;
+  color: white;
+}

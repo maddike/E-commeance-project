@@ -1,0 +1,217 @@
+/* Cart.css - Alternative Style */
+
+/* Page */
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+.cart-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.empty {
+  font-size: 1.3rem;
+  color: #666;
+}
+
+/* Cart Container */
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Cart Items */
+.cart-items {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-card {
+  display: flex;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.cart-card:hover {
+  transform: translateY(-3px);
+}
+
+.cart-img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.cart-info h3 {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.cart-info p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.qty-box button {
+  width: 32px;
+  height: 32px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.remove-btn {
+  padding: 6px 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Billing Summary */
+.billing-summary {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Coupon Box */
+.coupon-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.coupon-input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.apply-btn {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background-color: #1565c0;
+}
+
+/* Discount Buttons */
+.discount-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.green-btn {
+  padding: 10px 14px;
+  background-color: #43a047;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.green-btn:hover {
+  background-color: #388e3c;
+}
+
+/* Billing Details */
+.billing-details p,
+.billing-details h3 {
+  margin: 8px 0;
+  color: #333;
+}
+
+/* Email Section */
+.email-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.email-input,
+.name-input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Clear Cart Button */
+.clear-btn {
+  padding: 12px;
+  background-color: #5236f4;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.clear-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Proceed to Payment Button */
+.billing-summary button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+}

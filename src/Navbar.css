@@ -1,0 +1,71 @@
+/* NAVBAR MAIN */
+.navbar {
+  width: 95%;
+  height: 75px;
+  background-color: #1a1a1a; /* dark background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 2px solid #ff00ff; /* subtle neon accent */
+}
+
+/* BRAND NAME */
+.navbar h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3c0879; /* neon purple */
+  text-shadow: 0 0 5px #0fa0da, 0 0 15px #ff0000, 0 0 20px #00ff00;
+  letter-spacing: 1px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* NAV LINKS STYLE */
+.nav-links a {
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+  color: #2bff00;
+  text-shadow: 0 0 5px #ff008c, 0 0 10px #0026ff, 0 0 20px #ff00ff;
+  transform: translateY(-2px);
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  padding: 8px 18px;
+  background-color: #5900ff; /* neon purple button */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #d60d28;
+
+  transform: scale(1.05);
+}

@@ -1,0 +1,160 @@
+.veg-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.veg-title {
+  font-size: 70px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #2e7d32; /* green theme */
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+}
+
+.veg-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 per row */
+  gap: 20px;
+  padding: 10px;
+}
+
+.veg-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.veg-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.veg-card img {
+  width: 180px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.veg-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.veg-card p {
+  font-size: 16px;
+  color: #0a07b6; /* green */
+  font-weight: bold;
+}
+
+/* ⭐ Description text */
+.veg-desc {
+  color: #2509be;
+  font-size: 14px;
+  margin-top: -5px;
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+/* ⭐ STAR RATINGS */
+.stars {
+  margin: 5px 0;
+}
+
+.star {
+  color: gold;
+  font-size: 20px;
+  margin-right: 3px;
+}
+
+/* 🔥 OFFER BADGE */
+.offer-badge {
+  background: #ff3b3b;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Add to cart button */
+.veg-card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #2e7d46;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.veg-card button:hover {
+  background-color: #5e1b4d;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 5px;
+  padding: 8px 12px;
+  background: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: #c28006;
+  color: white;
+}
+
+/* 🌿 Veg Popup Middle */
+.popup {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c7580e;
+  color: white;
+  padding: 20px 35px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+  z-index: 9999;
+  animation: fadeInOut 1.5s ease-in-out forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Popup Animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+}
