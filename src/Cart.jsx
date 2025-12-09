@@ -11,6 +11,8 @@ import {
 import SendOrderEmail from "./SendorderEmail";
 import "./Cart.css";
 import { useNavigate } from "react-router-dom";
+import QRCode from "react-qr-code";
+
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
