@@ -9,7 +9,8 @@ import NonVeg from "./NonVeg";
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
-import ContactUs from "./Contactus"; // Filename must match exactly
+import ContactUs from "./ContactUs";
+ // Filename must match exactly
 import PaymentPage from "./Components/Paymentpage"; // Correct PascalCase
 import Login from "./Login";
 import Register from "./Register";
@@ -100,7 +101,7 @@ function App() {
           }
         />
         <Route
-          path="/contactus"
+          path="/Contactus"
           element={
             <ProtectedRoute>
               <ContactUs />
