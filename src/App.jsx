@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Veg from "./Veg";
-import NonVeg from "./Nonveg"; // Correct import
+import NonVeg from "./NonVeg";
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
