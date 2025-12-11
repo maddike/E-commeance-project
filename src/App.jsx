@@ -10,7 +10,7 @@ import NonVeg from "./NonVeg";
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
-import ContactUs from "./ContactUs";             // Exact filename
+import ContactUs from "./Contactus";             // Exact filename
 import PaymentPage from "./Components/PaymentPage"; // Exact filename
 import Login from "./Login";
 import Register from "./Register";
