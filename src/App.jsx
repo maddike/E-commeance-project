@@ -9,7 +9,7 @@ import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
 import { addToCart } from "./Store";
-import Nonveg from "./nonveg";
+import NonVeg from "./Nonveg";   // ✅ FIXED — correct import
 import ContactUs from "./Contactus";
 import PaymentPage from "./Components/Paymentpage";
 import Login from "./Login";
@@ -66,7 +66,7 @@ function App() {
           path="/nonveg"
           element={
             isLoggedIn ? (
-              <NonVeg addToCart={handleAddToCart} />
+              <NonVeg addToCart={handleAddToCart} />   // ✅ FIXED — matches import
             ) : (
               <Navigate to="/" />
             )
