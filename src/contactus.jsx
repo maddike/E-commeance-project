@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ContactUs.css";
 
- function ContactUs() {
+ function Contactus() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -66,4 +66,4 @@ import "./ContactUs.css";
     </div>
   );
 }
-export default ContactUs;
+export default Contactus;

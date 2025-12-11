@@ -10,7 +10,6 @@ import NonVeg from "./NonVeg";
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
-import ContactUs from "./Contactus";
   // ✅ Correct import
 import Paymentpage from "./Components/Paymentpage";
 import Login from "./Login";
@@ -19,6 +18,7 @@ import Orders from "./Orders";
 
 // Redux actions
 import { addToCart } from "./Store";
+import Contactus from "./Contactus";
 
 
 function App() {
@@ -113,7 +113,7 @@ function App() {
           path="/contactus"
           element={
             <ProtectedRoute>
-              <ContactUs />
+              <Contactus />
             </ProtectedRoute>
           }
         />
