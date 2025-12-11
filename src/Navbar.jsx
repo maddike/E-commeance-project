@@ -21,7 +21,6 @@ function Navbar() {
         <Link to="/veg">🥗 Veg</Link>
         <Link to="/nonveg">🍗 Non-Veg</Link>
         <Link to="/milkshakes">🥤 Milkshakes</Link>
-        <Link to="/contactus">📞 Contact Us</Link>
         <Link to="/about">ℹ️ About</Link>
         <Link to="/cart">🛒 Cart ({cart.length})</Link>
         <Link to="/orders">📝 Orders</Link>

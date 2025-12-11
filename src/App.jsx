@@ -10,16 +10,14 @@ import NonVeg from "./NonVeg";
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
-  // ✅ Correct import
-import Paymentpage from "./Components/Paymentpage";
+import Paymentpage from "./Components/Paymentpage"; 
 import Login from "./Login";
 import Register from "./Register";
 import Orders from "./Orders";
 
+
 // Redux actions
 import { addToCart } from "./Store";
-import Contactus from "./Contactus";
-
 
 function App() {
   const dispatch = useDispatch();
@@ -29,12 +27,13 @@ function App() {
     dispatch(addToCart(item));
   };
 
+  // Check login status
   const isLoggedIn = localStorage.getItem("auth") === "true";
 
-  // Hide Navbar on login/register
+  // Hide Navbar only on login & register pages
   const hideNav = ["/", "/register"].includes(location.pathname);
 
-  // Protected Route
+  // Protected Route component
   const ProtectedRoute = ({ children }) => {
     return isLoggedIn ? children : <Navigate to="/" />;
   };
@@ -44,7 +43,7 @@ function App() {
       {!hideNav && <Navbar />}
 
       <Routes>
-        {/* AUTH ROUTES */}
+        {/* LOGIN ROUTES */}
         <Route
           path="/"
           element={isLoggedIn ? <Navigate to="/home" /> : <Login />}
@@ -105,15 +104,6 @@ function App() {
           element={
             <ProtectedRoute>
               <About />
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/contactus"
-          element={
-            <ProtectedRoute>
-              <Contactus />
             </ProtectedRoute>
           }
         />
