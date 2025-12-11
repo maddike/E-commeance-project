@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
+// Components
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Veg from "./Veg";
@@ -9,13 +10,13 @@ import NonVeg from "./NonVeg";
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
-import ContactUs from "./ContactUs";
- // Filename must match exactly
-import PaymentPage from "./Components/Paymentpage"; // Correct PascalCase
+import ContactUs from "./ContactUs";             // Exact filename
+import PaymentPage from "./Components/PaymentPage"; // Exact filename
 import Login from "./Login";
 import Register from "./Register";
-import Orders from "./Orders"; // Ensure filename matches
+import Orders from "./Orders";                   // Exact filename
 
+// Redux actions
 import { addToCart } from "./Store";
 
 function App() {
@@ -61,7 +62,7 @@ function App() {
           }
         />
         <Route
-          path="/Veg"
+          path="/veg"
           element={
             <ProtectedRoute>
               <Veg addToCart={handleAddToCart} />
@@ -101,7 +102,7 @@ function App() {
           }
         />
         <Route
-          path="/Contactus"
+          path="/contactus"
           element={
             <ProtectedRoute>
               <ContactUs />
