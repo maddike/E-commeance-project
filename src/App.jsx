@@ -10,8 +10,8 @@ import NonVeg from "./NonVeg";
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
-            // Exact filename
-import PaymentPage from "./Components/PaymentPage"; // Exact filename
+import Paymentpage from "./Components/Paymentpage";          // Exact filename
+ // Exact filename
 import Login from "./Login";
 import Register from "./Register";
 import Orders from "./Orders";                   // Exact filename
@@ -86,12 +86,9 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route
-          path="/cart"
-          element={
-            <ProtectedRoute>
-              <Cart />
+        <Route path="/cart"  element={<ProtectedRoute>   <Cart />
             </ProtectedRoute>
+            
           }
         />
         <Route
@@ -122,7 +119,7 @@ function App() {
           path="/payment"
           element={
             <ProtectedRoute>
-              <PaymentPage />
+              <Paymentpage />
             </ProtectedRoute>
           }
         />

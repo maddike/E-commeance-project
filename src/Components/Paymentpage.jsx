@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-function PaymentPage() {
+function Paymentpage() {
   const cartItems = useSelector((state) => state.cart);
   const amount = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -210,4 +210,4 @@ function PaymentPage() {
   );
 }
 
-export default PaymentPage;
+export default Paymentpage;
