@@ -9,7 +9,9 @@ import NonVeg from "./NonVeg";
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
-import ContactUs from "./ContactUs";
+// Example if the file is named Contactus.jsx
+import Contactus from "./Contactus";
+
 import PaymentPage from "./Components/Paymentpage";
 import Login from "./Login";
 import Register from "./Register";
