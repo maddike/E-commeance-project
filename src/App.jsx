@@ -10,7 +10,7 @@ import NonVeg from "./NonVeg";
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
-import ContactUs from "./Contactus";             // Exact filename
+            // Exact filename
 import PaymentPage from "./Components/PaymentPage"; // Exact filename
 import Login from "./Login";
 import Register from "./Register";
@@ -18,6 +18,7 @@ import Orders from "./Orders";                   // Exact filename
 
 // Redux actions
 import { addToCart } from "./Store";
+import Contactus from "./Contactus";
 
 function App() {
   const dispatch = useDispatch();
@@ -102,10 +103,10 @@ function App() {
           }
         />
         <Route
-          path="/contactus"
+          path="/contact"
           element={
             <ProtectedRoute>
-              <ContactUs />
+              <Contactus />
             </ProtectedRoute>
           }
         />
