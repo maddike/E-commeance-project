@@ -9,7 +9,7 @@ import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
 import { addToCart } from "./Store";
-import NonVeg from "./Nonveg";
+import Nonveg from "./nonveg";
 import ContactUs from "./Contactus";
 import PaymentPage from "./Components/Paymentpage";
 import Login from "./Login";
