@@ -10,6 +10,7 @@ import NonVeg from "./NonVeg";
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
+import Contactus from "./Contactus";
 import Paymentpage from "./Components/Paymentpage";          // Exact filename
  // Exact filename
 import Login from "./Login";
@@ -18,7 +19,7 @@ import Orders from "./Orders";                   // Exact filename
 
 // Redux actions
 import { addToCart } from "./Store";
-import Contactus from "./Contactus";
+
 
 
 function App() {
