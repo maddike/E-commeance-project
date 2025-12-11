@@ -10,16 +10,15 @@ import NonVeg from "./NonVeg";
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
-import Contactus from "./Contactus";
-import Paymentpage from "./Components/Paymentpage";          // Exact filename
- // Exact filename
+import ContactUs from "./Contactus";
+  // ✅ Correct import
+import Paymentpage from "./Components/Paymentpage";
 import Login from "./Login";
 import Register from "./Register";
-import Orders from "./Orders";                   // Exact filename
+import Orders from "./Orders";
 
 // Redux actions
 import { addToCart } from "./Store";
-
 
 
 function App() {
@@ -32,10 +31,10 @@ function App() {
 
   const isLoggedIn = localStorage.getItem("auth") === "true";
 
-  // Hide navbar on login/register pages
+  // Hide Navbar on login/register
   const hideNav = ["/", "/register"].includes(location.pathname);
 
-  // ProtectedRoute wrapper
+  // Protected Route
   const ProtectedRoute = ({ children }) => {
     return isLoggedIn ? children : <Navigate to="/" />;
   };
@@ -64,6 +63,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+
         <Route
           path="/veg"
           element={
@@ -72,6 +72,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+
         <Route
           path="/nonveg"
           element={
@@ -80,6 +81,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+
         <Route
           path="/milkshakes"
           element={
@@ -88,11 +90,16 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/cart"  element={<ProtectedRoute>   <Cart />
+
+        <Route
+          path="/cart"
+          element={
+            <ProtectedRoute>
+              <Cart />
             </ProtectedRoute>
-            
           }
         />
+
         <Route
           path="/about"
           element={
@@ -101,14 +108,16 @@ function App() {
             </ProtectedRoute>
           }
         />
+
         <Route
           path="/contactus"
           element={
             <ProtectedRoute>
-             <Contactus />
+              <ContactUs />
             </ProtectedRoute>
           }
         />
+
         <Route
           path="/orders"
           element={
@@ -117,6 +126,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+
         <Route
           path="/payment"
           element={
