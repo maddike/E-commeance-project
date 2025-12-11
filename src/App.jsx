@@ -5,16 +5,16 @@ import { useDispatch } from "react-redux";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Veg from "./Veg";
+import NonVeg from "./Nonveg"; // Correct import
 import Milkshakes from "./Milkshakes";
 import Cart from "./Cart";
 import About from "./About";
-import { addToCart } from "./Store";
-import NonVeg from "./Nonveg";   // ✅ FIXED — correct import
 import ContactUs from "./Contactus";
 import PaymentPage from "./Components/Paymentpage";
 import Login from "./Login";
 import Register from "./Register";
 import Orders from "./orders";
+import { addToCart } from "./Store";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,20 +26,24 @@ function App() {
 
   const isLoggedIn = localStorage.getItem("auth") === "true";
 
-  // Hide navbar on login/register
+  // Hide navbar on login/register pages
   const hideNav = ["/", "/register"].includes(location.pathname);
+
+  // ProtectedRoute wrapper
+  const ProtectedRoute = ({ children }) => {
+    return isLoggedIn ? children : <Navigate to="/" />;
+  };
 
   return (
     <>
       {!hideNav && <Navbar />}
 
       <Routes>
-        {/* AUTH */}
+        {/* AUTH ROUTES */}
         <Route
           path="/"
           element={isLoggedIn ? <Navigate to="/home" /> : <Login />}
         />
-
         <Route
           path="/register"
           element={isLoggedIn ? <Navigate to="/home" /> : <Register />}
@@ -48,65 +52,83 @@ function App() {
         {/* PROTECTED ROUTES */}
         <Route
           path="/home"
-          element={isLoggedIn ? <Home /> : <Navigate to="/" />}
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
         />
 
         <Route
           path="/veg"
           element={
-            isLoggedIn ? (
+            <ProtectedRoute>
               <Veg addToCart={handleAddToCart} />
-            ) : (
-              <Navigate to="/" />
-            )
+            </ProtectedRoute>
           }
         />
 
         <Route
           path="/nonveg"
           element={
-            isLoggedIn ? (
-              <NonVeg addToCart={handleAddToCart} />   // ✅ FIXED — matches import
-            ) : (
-              <Navigate to="/" />
-            )
+            <ProtectedRoute>
+              <NonVeg addToCart={handleAddToCart} />
+            </ProtectedRoute>
           }
         />
 
         <Route
           path="/milkshakes"
           element={
-            isLoggedIn ? (
+            <ProtectedRoute>
               <Milkshakes addToCart={handleAddToCart} />
-            ) : (
-              <Navigate to="/" />
-            )
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/cart"
+          element={
+            <ProtectedRoute>
+              <Cart />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/about"
+          element={
+            <ProtectedRoute>
+              <About />
+            </ProtectedRoute>
           }
         />
 
         <Route
           path="/contactus"
-          element={isLoggedIn ? <ContactUs /> : <Navigate to="/" />}
-        />
-
-        <Route
-          path="/cart"
-          element={isLoggedIn ? <Cart /> : <Navigate to="/" />}
-        />
-
-        <Route
-          path="/about"
-          element={isLoggedIn ? <About /> : <Navigate to="/" />}
+          element={
+            <ProtectedRoute>
+              <ContactUs />
+            </ProtectedRoute>
+          }
         />
 
         <Route
           path="/orders"
-          element={isLoggedIn ? <Orders /> : <Navigate to="/" />}
+          element={
+            <ProtectedRoute>
+              <Orders />
+            </ProtectedRoute>
+          }
         />
 
         <Route
           path="/payment"
-          element={isLoggedIn ? <PaymentPage /> : <Navigate to="/" />}
+          element={
+            <ProtectedRoute>
+              <PaymentPage />
+            </ProtectedRoute>
+          }
         />
       </Routes>
     </>
