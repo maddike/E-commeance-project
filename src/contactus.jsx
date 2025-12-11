@@ -66,4 +66,4 @@ import "./Contactus.css";
     </div>
   );
 }
-export default Contactus
+export default Contactus;

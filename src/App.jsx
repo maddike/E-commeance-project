@@ -20,6 +20,7 @@ import Orders from "./Orders";                   // Exact filename
 import { addToCart } from "./Store";
 import Contactus from "./Contactus";
 
+
 function App() {
   const dispatch = useDispatch();
   const location = useLocation();
@@ -100,10 +101,10 @@ function App() {
           }
         />
         <Route
-          path="/contact"
+          path="/contactus"
           element={
             <ProtectedRoute>
-              <Contactus />
+             <Contactus />
             </ProtectedRoute>
           }
         />
