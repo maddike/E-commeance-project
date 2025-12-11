@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ProductCard from "./Productcard";
-import "./NonVeg.css";
+import "./Nonveg.css";
 
 function NonVeg({ addToCart }) {
   const nonVegItems = [
