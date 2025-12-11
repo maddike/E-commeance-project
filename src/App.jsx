@@ -2,21 +2,20 @@ import React from "react";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import Navbar from "./Navbar";
-import Home from "./Home";
-import Veg from "./Veg";
-import NonVeg from "./NonVeg";
-import Milkshakes from "./Milkshakes";
-import Cart from "./Cart";
-import About from "./About";
-// Example if the file is named Contactus.jsx
-import Contactus from "./Contactus";
+import Navbar from "./Navbar";                 // Navbar.jsx
+import Home from "./Home";                     // Home.jsx
+import Veg from "./Veg";                       // Veg.jsx
+import NonVeg from "./NonVeg";                 // NonVeg.jsx
+import Milkshakes from "./Milkshakes";         // Milkshakes.jsx
+import Cart from "./Cart";                     // Cart.jsx
+import About from "./About";                   // About.jsx
+import ContactUs from "./ContactUs";           // ContactUs.jsx (exact filename)
+import PaymentPage from "./Components/PaymentPage"; // PaymentPage.jsx (exact filename, PascalCase)
+import Login from "./Login";                   // Login.jsx
+import Register from "./Register";             // Register.jsx
+import Orders from "./Orders";                 // Orders.jsx
 
-import PaymentPage from "./Components/Paymentpage";
-import Login from "./Login";
-import Register from "./Register";
-import Orders from "./orders";
-import { addToCart } from "./Store";
+import { addToCart } from "./Store";          // Store.js
 
 function App() {
   const dispatch = useDispatch();
@@ -60,7 +59,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/veg"
           element={
@@ -69,7 +67,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/nonveg"
           element={
@@ -78,7 +75,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/milkshakes"
           element={
@@ -87,7 +83,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/cart"
           element={
@@ -96,7 +91,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/about"
           element={
@@ -105,7 +99,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/contactus"
           element={
@@ -114,7 +107,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/orders"
           element={
@@ -123,7 +115,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/payment"
           element={
