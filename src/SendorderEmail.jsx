@@ -1,6 +1,7 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
 
+
 function SendOrderEmail({ cart, netAmount, tax, delivery, totalAmount, discount, customer }) {
 
   const handleSendEmail = () => {
